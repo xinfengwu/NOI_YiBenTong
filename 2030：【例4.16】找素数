@@ -28,7 +28,7 @@
       cin>>a>>b;
       for(s=a;s<=b;s++){
           flag=true;
-          for(i=2;i<s;i++){
+          for(i=2;i*i<=s;i++){//优化
               if(s%i==0){flag=false;break;}
           }
           if(flag){cout<<s<<endl;}
