@@ -20,16 +20,20 @@
 
 ***/
 #include<iostream>
+#include<math.h>
   using namespace std;
- 
   int main(){
       int a,b,s,i;
       bool flag;
       cin>>a>>b;
       for(s=a;s<=b;s++){
           flag=true;
-          for(i=2;i*i<=s;i++){//优化
-              if(s%i==0){flag=false;break;}
+          for(i=2;i<=sqrt(s);i++){// 一个数不能被超过他开方的数整除
+              if(s%i==0)
+              {
+                flag=false;
+                break;
+              }
           }
           if(flag){cout<<s<<endl;}
       }
