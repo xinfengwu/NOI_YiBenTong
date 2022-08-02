@@ -19,18 +19,19 @@
 
 对于所有数据，2≤n≤20000。
 ***/
-
 #include<iostream>
 
 using namespace std;
 int main(){
+	// 21 = 3 * 7
+	//n = i * j
 	int n;
 	cin>>n;
 	cout<<n<<"=";
-	for(int i=2;i<=n;i++){
+	for(int i=2;i<=n/2;i++){
 		while(n%i==0){
 			cout<<i;
-			n=n/i;
+			n=n/i;//n =i * n/i，若i最小，则n/i最大
 			if(n!=1)cout<<"*";
 		}
 	}
